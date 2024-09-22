@@ -55,7 +55,7 @@ else
     echo -e "[combine]\ntype = alias\nremote = dummy" > rclone.conf
 fi
 
-CMD="${RCLONE_COMMAND} serve http combine: --addr=:$PORT --read-only --config rclone.conf"
+CMD="${RCLONE_COMMAND} serve webdav NewB2: --addr=:$PORT --read-only --config rclone.conf"
 if [ -n "${USERNAME}" ] && [ -n "${PASSWORD}" ]; then
     CMD="${CMD} --user=\"$USERNAME\" --pass=\"$PASSWORD\""
     echo "Authentication is set"
